@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Welcome to Blanka</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Wrong identification :</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>defaults</key>
+			<string>com.maximehip.blanka</string>
+			<key>key</key>
+			<string>AlertTitle</string>
+			<key>label</key>
+			<string>Alert Title:</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>defaults</key>
+			<string>com.maximehip.blanka</string>
+			<key>key</key>
+			<string>AlertText</string>
+			<key>label</key>
+			<string>Alert Text:</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.maximehip.blanka</string>
+			<key>key</key>
+			<string>scrolle</string>
+			<key>label</key>
+			<string>Kill apps in AppSwitcher</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.maximehip.blanka</string>
+			<key>key</key>
+			<string>openSwitch</string>
+			<key>label</key>
+			<string>Open apps in AppSwitcher</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.maximehip.blanka</string>
+			<key>key</key>
+			<string>deleted</string>
+			<key>label</key>
+			<string>Block delete apps</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>label</key>
+			<string>Custom Passcode</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<false/>
+			<key>defaults</key>
+			<string>com.maximehip.blanka</string>
+			<key>key</key>
+			<string>codee</string>
+			<key>label</key>
+			<string>Enable code</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+		      <key>action</key>
+		      <string>resetApps</string>
+		      <key>cell</key>
+		      <string>PSButtonCell</string>
+		      <key>label</key>
+		      <string>Unlock apps</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>detail</key>
+			<string>BLKAboutListController</string>
+			<key>isController</key>
+			<true/>
+			<key>label</key>
+			<string>About Me</string>
+		</dict>
+		<dict>
+		      <key>action</key>
+		      <string>respring</string>
+		      <key>cell</key>
+		      <string>PSButtonCell</string>
+		      <key>label</key>
+		      <string>Respring Device</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>Blanka</string>
+</dict>
+</plist>
