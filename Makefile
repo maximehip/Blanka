@@ -1,17 +1,20 @@
-SYSROOT = $(THEOS)/sdks/iPhoneOS11.2.sdk
+FINALPACKAGE = 1
+
 ARCHS = arm64 arm64e
+
+THEOS_DEVICE_IP = 192.168.1.16
 
 include $(THEOS)/makefiles/common.mk
 
-BUNDLE_NAME = Blanka
-Blanka_FILES = BLKRootListController.m BLKAboutListController.m
-Blanka_INSTALL_PATH = /Library/PreferenceBundles
-Blanka_FRAMEWORKS = UIKit
-Blanka_PRIVATE_FRAMEWORKS = Preferences
-Blanka_EXTRA_FRAMEWORKS += CepheiPrefs
+TWEAK_NAME = Blanka
+Blanka_FILES = Tweak.xm 
+Blanka_FRAMEWORKS = Foundation UIKit CoreGraphics
+Blanka_LIBRARIES = MobileGestalt
+Blanka_EXTRA_FRAMEWORKS += Cephei
 
-include $(THEOS_MAKE_PATH)/bundle.mk
+include $(THEOS_MAKE_PATH)/tweak.mk
 
-internal-stage::
-	$(ECHO_NOTHING)mkdir -p $(THEOS_STAGING_DIR)/Library/PreferenceLoader/Preferences$(ECHO_END)
-	$(ECHO_NOTHING)cp entry.plist $(THEOS_STAGING_DIR)/Library/PreferenceLoader/Preferences/Blanka.plist$(ECHO_END)
+after-install::
+	install.exec "killall -9 SpringBoard"
+SUBPROJECTS += blanka
+include $(THEOS_MAKE_PATH)/aggregate.mk
